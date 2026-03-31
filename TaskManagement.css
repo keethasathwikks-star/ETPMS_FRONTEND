@@ -1,0 +1,66 @@
+/* ===================================
+   Task Management Page Styles
+   =================================== */
+
+.task-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 38%),
+                radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.12), transparent 38%),
+                rgba(15, 23, 42, 0.85);
+    border-radius: 24px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(99, 102, 241, 0.16);
+}
+
+.task-desc {
+    display: block;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Status select dropdown inline */
+.status-select {
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    appearance: auto;
+    transition: all 0.2s ease;
+}
+
+.status-pending {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+}
+
+.status-progress {
+    background: rgba(34, 211, 238, 0.15);
+    color: #22d3ee;
+}
+
+.status-completed {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+}
+
+/* Form row for side-by-side inputs */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+    font-family: inherit;
+}

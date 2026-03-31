@@ -1,0 +1,51 @@
+/* ===================================
+   ETPMS — Global Application Styles
+   Dark theme with premium design
+   =================================== */
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* App shell */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 2rem 3rem;
+  min-height: calc(100vh - 88px);
+  background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.12), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.08), transparent 35%),
+              linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Page header shared across pages */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.3rem 0;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.16);
+}
+
+.page-subtitle {
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin: 0;
+}

@@ -1,0 +1,118 @@
+/* ===================================
+   Navbar Styles — Glassmorphism Design
+   =================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 70px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.85rem;
+    font-weight: 900;
+    letter-spacing: 0.24em;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    color: #f8fafc;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.45));
+}
+
+.navbar-logo::before,
+.navbar-logo::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.9), rgba(236, 72, 153, 0.9));
+    border-radius: 999px;
+    opacity: 0.85;
+}
+
+.navbar-logo::before {
+    top: -8px;
+    left: 0;
+}
+
+.navbar-logo::after {
+    bottom: -8px;
+    right: 0;
+}
+
+.logo-text {
+    position: relative;
+    background: linear-gradient(90deg, #a855f7, #60a5fa, #ec4899, #facc15);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.35));
+    animation: logo-glow 4.5s linear infinite;
+}
+
+@keyframes logo-glow {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+    color: #e2e8f0;
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.nav-link.active {
+    color: #c7d2fe;
+    background: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+}
+
+.nav-icon {
+    font-size: 1.1rem;
+}
